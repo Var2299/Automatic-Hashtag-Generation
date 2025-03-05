@@ -12,7 +12,6 @@ export default function Home() {
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
-    // Clear hashtags when text changes
     setHashtags([]);
     setError("");
   }, [text]);
