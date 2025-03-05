@@ -38,6 +38,10 @@ A **smart NLP-based hashtag generator** built with **Next.js & TypeScript**. Thi
 | **Next.js API Routes** | Handles **server-side hashtag generation** |
 | **CSS Animations (keyframes, transitions)** | Enhances UI with **smooth visual effects** |
 
+![d1](https://github.com/user-attachments/assets/f5d2c921-e12d-4804-a6bf-59825ca88fff)
+![d11](https://github.com/user-attachments/assets/993ce243-b0a3-4a3c-9f89-88a3066becb6)
+![d12](https://github.com/user-attachments/assets/16fe0e89-15a8-4a13-b939-d10734ed6825)
+
 ---
 
 ## Getting Started
