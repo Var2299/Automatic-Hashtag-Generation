@@ -1,20 +1,20 @@
 # 🚀 Automatic Hashtag Generation for Social Media Posts  
 
-An **AI-powered hashtag generator** built with **Next.js & TypeScript**, utilizing **Natural Language Processing (NLP) and keyword extraction** to generate **smart, relevant, and dynamic hashtags** for social media posts.  
+A **smart NLP-based hashtag generator** built with **Next.js & TypeScript**. This tool analyzes user input using **Natural Language Processing (NLP) techniques** to generate **meaningful and relevant hashtags** for social media.  
 
-🔹 **Optimized NLP Engine**  
-🔹 **Beautiful UI with Modern Animations**  
-🔹 **Fast & Responsive**  
+🔹 **Extracts Key Phrases & Noun Phrases**  
+🔹 **Modern UI with Advanced Animations**  
+🔹 **Fast, Lightweight & Responsive**  
 
 ---
 
 ## 📌 Features  
 
-✅ **AI-Powered Hashtag Generation** – Extracts the most relevant hashtags from text  
+✅ **Smart Hashtag Generation** – Extracts the most relevant keywords from text  
 ✅ **Optimized NLP Logic** – Uses **noun phrase extraction & keyword analysis**  
 ✅ **Modern UI Design** – Styled with **glassmorphism, animated gradients, and smooth interactions**  
 ✅ **Dynamic Animations** – Smooth **fade-in effects, hover transitions, and pulse animations**  
-✅ **Mobile-Friendly & Responsive** – Adapts to **all screen sizes**  
+✅ **Mobile-Friendly & Responsive** – Works across **all devices**  
 ✅ **Error Handling & Loading State** – Provides a seamless user experience  
 
 ---
