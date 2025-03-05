@@ -1,6 +1,10 @@
 "use client";
 import { useState, FormEvent, useEffect } from "react";
 
+interface HashtagResponse {
+  hashtags: string[];
+}
+
 export default function Home() {
   const [text, setText] = useState<string>("");
   const [hashtags, setHashtags] = useState<string[]>([]);
@@ -31,10 +35,14 @@ export default function Home() {
         throw new Error(errorData.error || "Something went wrong");
       }
 
-      const data = await res.json();
+      const data: HashtagResponse = await res.json();
       setHashtags(data.hashtags);
-    } catch (err: any) {
-      setError("Error: " + err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError("Error: " + err.message);
+      } else {
+        setError("An unknown error occurred");
+      }
     } finally {
       setLoading(false);
     }
@@ -71,14 +79,13 @@ export default function Home() {
       {error && <p style={{ color: "red", marginTop: "10px" }}>{error}</p>}
       {hashtags.length > 0 && (
         <div className="hashtagsContainer">
-        <h2>Generated Hashtags:</h2>
-        <div className="hashtags">
-          {hashtags.map((tag, index) => (
-            <span key={index} className="hashtag">{tag}</span>
-          ))}
+          <h2>Generated Hashtags:</h2>
+          <div className="hashtags">
+            {hashtags.map((tag, index) => (
+              <span key={index} className="hashtag">{tag}</span>
+            ))}
+          </div>
         </div>
-      </div>
-      
       )}
     </div>
   );
