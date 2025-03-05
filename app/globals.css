@@ -1,26 +1,323 @@
-@import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.hashtag {
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.hashtag:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* CSS for the Generated Hashtags Section */
+.hashtagsContainer {
+  margin-top: 20px;
+  padding: 1rem;
+  border-top: 2px solid var(--border-color);
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.hashtagsContainer h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent-color); /* Keeps the dynamic accent color */
+  margin-bottom: 10px;
+  animation: slideDown 0.6s ease-out;
+  
+  /* Bluish Neon Glow Effect */
+  
+  
+  /* Optional: Add a subtle blue outline for contrast */
+  -webkit-text-stroke: 1px rgba(0, 255, 255, 0.3); /* Thin cyan outline */
+  text-stroke: 1px rgba(0, 255, 255, 0.3); /* For better contrast */
+}
+
+.hashtagsContainer p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  letter-spacing: 0.05em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap');
+
+:root {
+  --gradient-1: linear-gradient(
+    45deg,
+    hsl(267deg 90% 72%) 0%,
+    hsl(178deg 100% 44%) 50%,
+    hsl(327deg 87% 65%) 100%
+  );
+  --neon-shadow: 0 0 32px hsl(267deg 90% 72% / 25%);
+  --fluid-min-width: 320;
+  --fluid-max-width: 1440;
+}
+
+/* Cyberpunk Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Holographic Body Effect */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Space Grotesk', system-ui, sans-serif;
+  background: 
+    radial-gradient(circle at 50% 0%, hsl(265deg 100% 12% / 0.9) 0%, #121212 100%),
+    var(--gradient-1);
+  background-blend-mode: multiply;
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+/* Quantum Container with Floating Animation */
+.container {
+  width: min(100%, 880px);
+  padding: clamp(2rem, 5vw, 4rem);
+  border-radius: 24px;
+  background: hsl(0deg 0% 100% / 0.05);
+  backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid hsl(0deg 0% 100% / 0.1);
+  position: relative;
+  transform-style: preserve-3d;
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotateX(0deg); }
+  50% { transform: translateY(-20px) rotateX(5deg); }
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--gradient-1);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  animation: borderFlow 20s linear infinite;
+}
+
+@keyframes borderFlow {
+  to { background-position: 400% 0; }
+}
+
+/* Hypermodern Typography */
+h1 {
+  --fluid-type: clamp(2.5rem, 8vw + 1rem, 4.5rem);
+  font-size: var(--fluid-type);
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  margin-bottom: 2rem;
+  text-shadow: var(--neon-shadow);
+}
+
+/* Alien Textarea */
+textarea {
+  all: unset;
+  width: 100%;
+  min-height: 200px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: hsl(0deg 0% 100% / 0.05);
+  border: 1px solid hsl(0deg 0% 100% / 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+textarea:focus {
+  background: hsl(0deg 0% 100% / 0.08);
+  box-shadow: 
+    0 0 48px hsl(267deg 90% 72% / 0.2),
+    inset 0 0 24px hsl(178deg 100% 44% / 0.1);
+}
+
+/* Holographic Button */
+button {
+  --shine: linear-gradient(
+    45deg,
+    transparent 40%,
+    hsl(0deg 0% 100% / 0.3) 50%,
+    transparent 60%
+  );
+  
+  all: unset;
+  position: relative;
+  padding: 1rem 2.5rem;
+  border-radius: 100px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: var(--gradient-1);
+  background-size: 300% 300%;
+  cursor: pointer;
+  transition: 
+    transform 0.3s ease,
+    background-position 0.5s ease;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--shine);
+  background-size: 300% 300%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+button:hover {
+  background-position: 100% 50%;
+  transform: translateY(-2px) scale(1.05);
+}
+
+button:hover::before {
+  opacity: 1;
+  animation: shine 1.5s ease infinite;
+}
+
+@keyframes shine {
+  to { background-position: 300% center; }
+}
+
+/* Cyber Hashtags */
+.hashtagsContainer {
+  display: grid;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.hashtag {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 100px;
+  background: hsl(0deg 0% 100% / 0.05);
+  border: 1px solid hsl(0deg 0% 100% / 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.hashtag:hover {
+  background: hsl(178deg 100% 44% / 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px hsl(178deg 100% 44% / 0.2);
+}
+
+.hashtag::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  background: var(--gradient-1) border-box;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) padding-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* Error Pulse Animation */
+.error {
+  color: hsl(0deg 100% 72%);
+  animation: errorPulse 1.5s ease infinite;
+}
+
+@keyframes errorPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Retro CRT Effect (Optional) */
+@media (min-width: 768px) {
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+      hsl(0deg 0% 100% / 0.03) 50%,
+      transparent 50%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 999;
+    animation: scanline 4s linear infinite;
+  }
+
+  @keyframes scanline {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(100%); }
+  }
 }
