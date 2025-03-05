@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Automatic Hashtag Generation for Social Media Posts  
+
+An **AI-powered hashtag generator** built with **Next.js & TypeScript**, utilizing **Natural Language Processing (NLP) and keyword extraction** to generate **smart, relevant, and dynamic hashtags** for social media posts.  
+
+🔹 **Optimized NLP Engine**  
+🔹 **Beautiful UI with Modern Animations**  
+🔹 **Fast & Responsive**  
+
+---
+
+## 📌 Features  
+
+✅ **AI-Powered Hashtag Generation** – Extracts the most relevant hashtags from text  
+✅ **Optimized NLP Logic** – Uses **noun phrase extraction & keyword analysis**  
+✅ **Modern UI Design** – Styled with **glassmorphism, animated gradients, and smooth interactions**  
+✅ **Dynamic Animations** – Smooth **fade-in effects, hover transitions, and pulse animations**  
+✅ **Mobile-Friendly & Responsive** – Adapts to **all screen sizes**  
+✅ **Error Handling & Loading State** – Provides a seamless user experience  
+
+---
+
+## 🛠️ Tech Stack  
+
+🔹 **Frontend:** Next.js, React, TypeScript  
+🔹 **Styling:** CSS, Advanced Animations, Responsive Design  
+🔹 **NLP & Hashtag Logic:** compromise.js, keyword-extractor  
+🔹 **API Handling:** Fetch API for seamless hashtag generation  
+
+---
+
+## 📚 Libraries Used  
+
+| Library               | Purpose |
+|-----------------------|---------|
+| **compromise.js** (`import nlp from "compromise"`) | NLP library for **extracting noun phrases** from text |
+| **keyword-extractor** (`import keyword_extractor from "keyword-extractor"`) | Identifies **important keywords** from the input text |
+| **React (useState, useEffect, FormEvent)** | Manages **component state & interactions** |
+| **Next.js API Routes** | Handles **server-side hashtag generation** |
+| **CSS Animations (keyframes, transitions)** | Enhances UI with **smooth visual effects** |
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/yourusername/automatic-hashtag-generator.git
+   cd automatic-hashtag-generator
+2. **Install Dependencies:**
+   ```bash
+   npm install
+3. **Run the Application:**
+   ```bash
+   npm run dev
+#### Open your browser and navigate to http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Live Demo
+#### Check out the live app here: [Live Demo](https://automatic-hashtag-generation.vercel.app/) 🌐
